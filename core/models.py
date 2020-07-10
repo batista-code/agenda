@@ -13,3 +13,5 @@ class Evento(models.Model):
         db_table = 'evento'
     def __str__(self):
         return self.titulo
+    def retorna_data(self):
+        return self.data_evento.strftime('%d/%m/%Y %H:%M')

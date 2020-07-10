@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Agenda</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+    </head>
+    <body>
+        <div align="right">
+            <a href="/logout">logout</a>
+        </div>
+        <h2>Agendamentos</h2>
+        <ul>
+            {% for evento in eventos %}
+                <li>{{evento.titulo}} - {{evento.retorna_data}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
