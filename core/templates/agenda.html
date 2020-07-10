@@ -4,15 +4,21 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Agenda</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
+    <div align="right">
+        <a href="/logout">logout</a>
+    </div>
     <h2>Agendamentos</h2>
-    <ul>
-        {% for evento in eventos %}
-             <li>{{evento.titulo}} - {{evento.get_data_evento}}</li>
-        {% endfor %}
-    </ul>
+    <div class="list-group">
+        <table class="table list-group"></table>
+            {% for evento in eventos %}
+                <tr class="list-group"><td><button type="button" class="list-group-item list-group-item-action">{{evento.titulo}} - {{evento.get_data_evento}} </button></td></tr>
+            {% endfor %}
+        </table>
+    </div>
     
 </body>
 </html>

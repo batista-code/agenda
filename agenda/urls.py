@@ -19,5 +19,9 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('agenda/', views.lista_evento)
+    path('agenda/', views.lista_evento),
+    path('login/', views.login_user),
+    path('', views.redirecionar),
+    path('login/submit', views.submit_login),
+    path('logout/', views.logout_user)
 ]
