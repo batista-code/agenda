@@ -34,3 +34,15 @@ def submit_login(request):
 
 def redirecionar(request):
     return redirect('/agenda')
+
+def cadastrar(request):
+    return render(request, 'cadastrar.html')
+
+def cadastrar_submit(request):
+    if request.POST:
+        titulo = request.POST.get('titulo')
+        data_evento = request.POST.get('data_evento')
+        descricao = request.POST.get('descricao')
+        usuario = request.user
+        Evento.objects.create(titulo=titulo, data_evento=data_evento,descricao=descricao,usuario=usuario)
+    return redirect('/')

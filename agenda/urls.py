@@ -22,6 +22,8 @@ urlpatterns = [
     path('agenda/', views.lista_evento),
     path('login/', views.login_user),
     path('', views.redirecionar),
+    path('cadastrar/',views.cadastrar),
     path('login/submit', views.submit_login),
+    path('cadastrar/submit', views.cadastrar_submit),
     path('logout/', views.logout_user)
 ]
